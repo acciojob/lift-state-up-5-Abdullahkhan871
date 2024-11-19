@@ -10,7 +10,7 @@ const Parent = () => {
       {!isLoggedIn ? (
         <Child setIsLoggedIn={setIsLoggedIn} />
       ) : (
-        <p>You are Logged In!</p>
+        <p>You are logged in!</p>
       )}
     </div>
   );
