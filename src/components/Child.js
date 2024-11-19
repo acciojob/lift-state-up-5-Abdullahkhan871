@@ -1,25 +1,30 @@
 import React from "react";
 
 const Child = ({ setIsLoggedIn }) => {
+  // onSubmit={(eve) => {
+  //   //   eve.preventDefault();
+  //   if (
+  //     eve.target["userName"].value.length > 0 &&
+  //     eve.target["userPassword"].value.length
+  //   ) {
+
+  //   }
+  // }}
   return (
     <div>
-      <form
-        onSubmit={(eve) => {
-          eve.preventDefault();
-          if (
-            eve.target["userName"].value.length > 0 &&
-            eve.target["userPassword"].value.length
-          ) {
-            setIsLoggedIn((isLoggedIn) => !isLoggedIn);
-          }
-        }}
-      >
+      <form>
         <label htmlFor="userName">User Name</label>
         <input id="userName" type="text" /> <br />
         <label htmlFor="userPassword">User Password</label>
         <input id="userPassword" type="password" />
         <br />
-        <input type="submit" />
+        <button
+          onClick={() => {
+            setIsLoggedIn((isLoggedIn) => !isLoggedIn);
+          }}
+        >
+          Login
+        </button>
       </form>
     </div>
   );
